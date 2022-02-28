@@ -5,6 +5,7 @@ set -e
 cd "$(dirname "$0")/.."
 
 bundle config --local path vendor/gems
+bundle config build.rugged --use-system-libraries
 
 bundle check > /dev/null 2>&1 || bundle install
 
